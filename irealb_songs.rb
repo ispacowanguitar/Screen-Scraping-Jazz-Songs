@@ -16,9 +16,7 @@ end
 composer.delete("")
 composer.each(&:lstrip!)
 composer.delete_at(634)
-# p composer
 
-# songs_hash = Hash.new { |h, k| h[k] = [] }
 index = 0
 1300.times do
 
@@ -57,22 +55,11 @@ index = 0
     style = "unknown"
   end
 
-    # p "#{title[index]} ........ #{style}........ #{composer[index]} .......... #{index}"
-    # songs_hash[title[index]] << [composer[index], style]
       file << "{title: \"#{title[index]}\"" + ", style:" + " \"#{style}\""+ ", composer: " "\"#{composer[index]}\"" + "},\n"
-
-# previous file was sent this line
-# "#{title[index]},#{style},#{composer[index]},#{index}\n"
-# "#{title[index]},#{style},#{composer[index]},#{index}\n"
 
   index += 1
     end
 end
-
-# nokogiri dump to file
-# ruby ruby save array to file
-
-# p songs_hash["You Must Believe In Spring"]
 
 
 
